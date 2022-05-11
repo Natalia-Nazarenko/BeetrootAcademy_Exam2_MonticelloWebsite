@@ -15,7 +15,6 @@ ul {
 
 .header {
   height: 100vh;
-  background: url("../img/backgr.jpg") no-repeat;
   background: -webkit-gradient(linear, left top, right top, from(rgba(126, 90, 255, 0.7)), to(rgba(85, 183, 255, 0.7))), url("../img/backgr.jpg") no-repeat;
   background: linear-gradient(to right, rgba(126, 90, 255, 0.7), rgba(85, 183, 255, 0.7)), url("../img/backgr.jpg") no-repeat;
   background-position: center center;
@@ -134,12 +133,12 @@ ul {
   transition: fill 0.3s;
 }
 
-.slick-slider .slick-list {
+.slider .slick-list {
   overflow: hidden;
   position: relative;
 }
 
-.slick-slider .slick-track {
+.slider .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,7 +200,7 @@ ul {
   background: #FFFFFF;
 }
 
-.slick-dots {
+.slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,6 +265,13 @@ ul {
   background: #2C4058;
   -webkit-transform: translate(100%);
           transform: translate(100%);
+}
+
+.section_news {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(126, 90, 255, 0.7)), to(rgba(85, 183, 255, 0.7))), url("../img/backgr-news.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(126, 90, 255, 0.7), rgba(85, 183, 255, 0.7)), url("../img/backgr-news.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .block__group {
@@ -373,5 +379,198 @@ ul {
 
 .hidden {
   display: none;
+}
+
+.slider-news .slick-list {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-news .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider-news .slick-slide {
+  margin-right: 30px;
+}
+
+.slider-news .slick-slide:first-child {
+  margin-left: 30px;
+}
+
+.slider-news .slick-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: url("../img/arr-next.png") 0 0/100% no-repeat;
+}
+
+.slider-news .slick-arrow.slick-prev {
+  left: -8%;
+  -webkit-transform: translate(0, -150%) rotate(180deg);
+          transform: translate(0, -150%) rotate(180deg);
+}
+
+.slider-news .slick-arrow.slick-prev:hover {
+  -webkit-transform: translate(0, -150%) rotate(180deg) scale(1.1);
+          transform: translate(0, -150%) rotate(180deg) scale(1.1);
+}
+
+.slider-news .slick-arrow.slick-next {
+  right: -8%;
+  -webkit-transform: translate(0, -150%);
+          transform: translate(0, -150%);
+}
+
+.slider-news .slick-arrow.slick-next:hover {
+  -webkit-transform: translate(0, -150%) scale(1.1);
+          transform: translate(0, -150%) scale(1.1);
+}
+
+.slider-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  position: relative;
+}
+
+.slider-news__block {
+  cursor: pointer;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slider-news__pic {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+.slider-news__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-news__title {
+  font-family: "Montserrat";
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #2C4058;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  width: 310px;
+  padding: 0 20px;
+  height: 80px;
+}
+
+.slider-news__text {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 1.36;
+  font-weight: 400;
+  color: #2C4058;
+  margin-bottom: 40px;
+  width: 310px;
+  padding: 0 20px;
+  height: 50px;
+}
+
+.slider-news__name {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2C4058;
+  margin-bottom: 5px;
+  position: relative;
+  padding: 0 20px 0 80px;
+}
+
+.slider-news__name::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: url("../img/photo-1.jpg");
+  margin-left: 20px;
+}
+
+.slider-news__name-freeman::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: url("../img/photo-2.jpg");
+  margin-left: 20px;
+}
+
+.slider-news__name-ward::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: url("../img/photo-3.jpg");
+  margin-left: 20px;
+}
+
+.slider-news__date {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #55B7FF;
+  margin-bottom: 30px;
+  padding: 0 20px 0 80px;
+}
+
+.slider-news .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.slider-news .dot-btns {
+  margin-right: 25px;
+  margin-bottom: 120px;
+}
+
+.slider-news .dot-btns:last-child {
+  margin-left: 25px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -13,7 +13,6 @@ ul {
 }
 .header {
   height: 100vh;
-  background: url('../img/backgr.jpg') no-repeat;
   background: linear-gradient(to right, rgba(126, 90, 255, 0.7), rgba(85, 183, 255, 0.7)), url('../img/backgr.jpg') no-repeat;
   background-position: center center;
   background-size: cover;
@@ -96,7 +95,7 @@ ul {
     }
   }
 }
-.slick-slider {
+.slider {
   .slick-list {
     overflow: hidden;
     position: relative;
@@ -136,7 +135,7 @@ ul {
     background: #FFFFFF;
   }
 }
-.slick-dots {
+.slider .slick-dots {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,6 +169,11 @@ ul {
       background: $font-color-blue;
       transform: translate(100%);
     }
+  }
+  &_news {
+  background: linear-gradient(to right, rgba(126, 90, 255, 0.7), rgba(85, 183, 255, 0.7)), url('../img/backgr-news.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
   }
 }
 .block {
@@ -236,9 +240,120 @@ ul {
 .hidden {
   display: none;
 }
+.slider-news {
+  .slick-list {
+    overflow: hidden;
+    position: relative;
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    margin-right: 30px;
+    &:first-child {
+      margin-left: 30px;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    // transform: translate(0, -150%);
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: url("../img/arr-next.png") 0 0 / 100% no-repeat;
+    &.slick-prev {
+      left: -8%;
+      transform: translate(0, -150%) rotate(180deg);
+      &:hover {
+      transform: translate(0, -150%) rotate(180deg) scale(1.1);
+      }
+    }
+    &.slick-next {
+      right: -8%;
+      transform: translate(0, -150%);
+      &:hover {
+      transform: translate(0, -150%) scale(1.1);
+      }
+    }
+  }
+}
+.slider-news {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  position: relative;
+  &__block {
+    cursor: pointer;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+  }
+  &__pic {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    @include text($font-big, 22px, 1.2, 700, $font-color-blue);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    width: 310px;
+    padding: 0 20px;
+    height: 80px;
+  }
+  &__text {
+    @include text($font-small, 18px, 1.36, 400, $font-color-blue);
+    margin-bottom: 40px;
+    width: 310px;
+    padding: 0 20px;
+    height: 50px;
+  }
+  &__name {
+    @include text($font-big, 18px, 1.2, 400, $font-color-blue);
+    margin-bottom: 5px;
+    position: relative;
+    padding: 0 20px 0 80px;
+    &::before {
+      @include slider-author-picture(url('../img/photo-1.jpg'));
+    }
+    &-freeman::before {
+      @include slider-author-picture(url('../img/photo-2.jpg'));
+    }
+    &-ward::before {
+      @include slider-author-picture(url('../img/photo-3.jpg'));
+    }
+  }
+  &__date {
+    @include text($font-big, 14px, 1.2, 400, #55B7FF);
+    margin-bottom: 30px;
+    padding: 0 20px 0 80px;
+  }
+}
+.slider-news {
+  .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  }
+  .dot-btns {
+    margin-right: 25px;
+    margin-bottom: 120px;
+    &:last-child {
+      margin-left: 25px;
+    }
+  }
+}
 
 
-
+@import "media-queries";
 
 
 
