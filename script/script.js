@@ -21,23 +21,18 @@ $('.slider-news').slick({
     //         breakpoint: 1024,
     //         settings: {
     //             slidesToShow: 3,
-    //             slidesToScroll: 3,
-    //             infinite: true,
-    //             dots: true
     //         }
     //     },
     //     {
     //         breakpoint: 600,
     //         settings: {
     //             slidesToShow: 2,
-    //             slidesToScroll: 2
     //         }
     //     },
     //     {
     //         breakpoint: 480,
     //         settings: {
     //             slidesToShow: 1,
-    //             slidesToScroll: 1
     //         }
     //     }
     // ]
@@ -45,13 +40,40 @@ $('.slider-news').slick({
 
 $(".slider-news .slick-dots").children().children().addClass("dot-btns");
 
+let smoothLink = document.querySelector('.header__img img');
+smoothLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    let projectsSection = document.querySelector('.section_projects')
+    projectsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
 
-
-// slider
-// карта
-// футер
 // перехід на секції
+// валідація форми
+// marker
 // респонсівнес
-// паралакс
+
+let map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"),
+        {
+            center: { lat: 50.44896759, lng: 30.51332140 },
+            zoom: 16,
+            mapId: 'd0ab2965df73818c',
+            disableDefaultUI: true,
+        });
+}
+
+window.initMap = initMap;
+
+let input = document.querySelector('input');
+
+// input.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     input.toggleClass('input-value');
+// });
+
 
 

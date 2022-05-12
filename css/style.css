@@ -46,6 +46,10 @@ ul {
   text-align: center;
 }
 
+.header__img img {
+  cursor: pointer;
+}
+
 .header__img img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -108,7 +112,7 @@ ul {
   color: #FFFFFF;
 }
 
-.menu__item:focus::before {
+.menu__item:hover::before {
   background: #FFFFFF;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -322,20 +326,7 @@ ul {
 }
 
 .block__btn {
-  border: 1px solid #2C4058;
-  outline: none;
-  background: transparent;
-  padding: 15px 10px;
-  width: 190px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
   margin-bottom: 60px;
-}
-
-.block__btn:hover {
-  background: #2C4058;
-  color: #fff;
 }
 
 .block span {
@@ -566,11 +557,251 @@ ul {
 }
 
 .slider-news .dot-btns {
-  margin-right: 25px;
-  margin-bottom: 120px;
+  margin: 0 25px 120px 0;
 }
 
 .slider-news .dot-btns:last-child {
   margin-left: 25px;
+}
+
+.section_gallery .title-2::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: -20px;
+  left: -20%;
+  width: 100px;
+  height: 1px;
+  background: #2C4058;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.section_gallery .btn {
+  margin-bottom: 100px;
+}
+
+.section__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.images__big {
+  margin-right: 10px;
+}
+
+.images__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 500px;
+}
+
+.group__item {
+  margin: 0 10px 10px 0;
+}
+
+.btn {
+  border: 1px solid #2C4058;
+  outline: none;
+  background: transparent;
+  padding: 15px 10px;
+  width: 190px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #2C4058;
+  color: #fff;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
+}
+
+.footer {
+  padding: 0 calc(50vw - 585px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(126, 90, 255, 0.6)), to(rgba(85, 183, 255, 0.6))), url("../img/footer-bg.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(126, 90, 255, 0.6), rgba(85, 183, 255, 0.6)), url("../img/footer-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.footer__bottom img {
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__logo span {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+.footer__nav {
+  padding: 0;
+}
+
+.footer__contacts {
+  background: url("../img/form-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 30px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__title {
+  position: relative;
+  margin-top: 20px;
+}
+
+.contacts__title::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: -20px;
+  left: 50%;
+  width: 100px;
+  height: 1px;
+  background: #2C4058;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.contacts__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 30px;
+}
+
+.contacts__info span {
+  font-family: "Montserrat";
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #000000;
+}
+
+.contacts__info span i {
+  margin-right: 10px;
+  color: #7E5AFF;
+}
+
+.contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contacts__form__btn {
+  background: #FFFFFF;
+}
+
+.form__input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #2C4058;
+  margin-bottom: 25px;
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000;
+}
+
+.form__input::-webkit-input-placeholder, .form__input::-moz-placeholder, .form__input:-moz-placeholder, .form__input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #4B5562;
+  opacity: 0.5;
+}
+
+.form__input:focus::-webkit-input-placeholder, .form__input:focus::-moz-placeholder, .form__input:focus:-moz-placeholder, .form__input:focus:-ms-input-placeholder {
+  color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
