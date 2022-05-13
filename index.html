@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/194c1bbbe9.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23bcb5ed%22></rect><path fill=%22%23fff%22 d=%22M52.64 82.12L46.62 82.12L24.82 25.17L24.47 25.17Q25.08 31.94 25.08 41.25L25.08 41.25L25.08 82.12L18.18 82.12L18.18 17.88L29.43 17.88L49.78 70.87L50.13 70.87L70.65 17.88L81.82 17.88L81.82 82.12L74.35 82.12L74.35 40.73Q74.35 33.61 74.96 25.26L74.96 25.26L74.61 25.26L52.64 82.12Z%22></path></svg>" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -18,9 +19,9 @@
             <div class="nav__logo"><img src="./img/logo.png" alt=""> </div>
             <ul class="nav__menu menu">
                 <li class="menu__item"><a href="" class="menu__link">ABOUT US</a></li>
-                <li class="menu__item"><a href="" class="menu__link">PROJECTS</a></li>
-                <li class="menu__item"><a href="" class="menu__link">NEWS</a></li>
-                <li class="menu__item"><a href="" class="menu__link">CONTACT</a></li>
+                <li class="menu__item" data-anchor="projects"><a href="" class="menu__link">PROJECTS</a></li>
+                <li class="menu__item" data-anchor="news"><a href="" class="menu__link">NEWS</a></li>
+                <li class="menu__item" data-anchor="contacts"><a href="" class="menu__link">CONTACT</a></li>
             </ul>
             <ul class="nav__social social">
                 <li class="social__item"><a href="" class="social__link">
@@ -66,10 +67,14 @@
         <div class="header__img"><img src="./img/arrow.svg" alt=""></div>
     </header>
     <main class="main">
-        <section class="main__section section section_projects" id="projects">
+        <section class="main__section section section_projects">
             <h2 class="section__title title-2">WHAT WE DO</h2>
             <div class="section__block block">
-                <div class="block__img"><img src="./img/tradecenter.jpg" alt=""></div>
+                <div class="block__scene-left">
+                    <div class="parallax" id="parallax">
+                        <img src="./img/tradecenter.jpg" alt="" data-depth="0.6">
+                    </div>
+                </div>
                 <div class="block__group">
                     <h4 class="block__subtitle">ONE WORLD</h4>
                     <h2 class="block__title title-2">TRADE CENTER</h2>
@@ -80,7 +85,11 @@
                 </div>
             </div>
             <div class="section__block block block-reverse">
-                <div class="block__img"><img src="./img/commercecenter.jpg" alt=""></div>
+                <div class="block__scene-right">
+                    <div class="parallax" id="parallax-2">
+                        <img src="./img/commercecenter.jpg" alt="" data-depth="0.6">
+                    </div>
+                </div>
                 <div class="block__group">
                     <h4 class="block__subtitle">INTERNATIONAL</h4>
                     <h2 class="block__title title-2">COMMERCE CENTER</h2>
@@ -133,7 +142,12 @@
         <section class="main__section section section_gallery">
             <h2 class="section__title title-2">GALLERY</h2>
             <div class="section__images images">
-                <div class="images__big"><img src="./img/gal-big.jpg" alt=""></div>
+                <div class="images__scene">
+                    <div class="parallax" id="parallax">
+                        <img src="./img/gal-big.jpg" alt="" data-depth="0.6">
+                        <!-- <div class="parallax-background" data-depth="0.1"></div> -->
+                    </div>
+                </div>
                 <div class="images__group group">
                     <img src="./img/gal-1.jpg" alt="" class="group__item">
                     <img src="./img/gal-2.jpg" alt="" class="group__item">
@@ -192,6 +206,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./script/script.js"></script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMTVnngFcmRjPGCEN_dhqIx74HTArczQY&callback=initMap&v=weekly"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMTVnngFcmRjPGCEN_dhqIx74HTArczQY&callback=initMap&v=weekly"></script>
 </body>
 </html>
