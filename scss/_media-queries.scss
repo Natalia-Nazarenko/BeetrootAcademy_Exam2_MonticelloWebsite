@@ -4,3 +4,247 @@
         padding: 0 15px;
     }
 }
+@media screen and (max-width: 1104px) {
+    .block__scene-left {
+        margin-right: 15px;
+    }
+    .block__scene-right {
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .slider__title {
+        font-size: 60px;
+    }
+    .title-2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+    .block {
+        &__text {
+            font-size: 20px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+    }
+    .slider-news {
+        max-width: 70%;
+        &__title {
+            font-size: 18px;
+            margin: 0;
+            width: 320px;
+        }
+        &__text {
+            font-size: 16px;
+            width: 320px;
+        }
+        &__pic {
+            height: 230px;
+        }
+        &__name {
+            font-size: 14px;
+        }
+    }
+    .menu {
+        &__item {
+            margin-left: 60px;
+        }
+        &__link {
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 975px) {
+    .slider-news {
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .block {
+        &__text {
+            font-size: 18px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .title-2 {
+        font-size: 28px;
+    }
+    .slider-news {
+        max-width: 50%;
+        &__title {
+            width: 100%;
+        }
+        &__text {
+            width: 100%;
+        }
+        &__pic {
+            margin-bottom: 20px;
+        }
+    }
+    #map {
+        height: 400px;
+    }
+}
+@media screen and (max-width: 830px) {
+    .slider .slick-dots {
+        display: flex;
+        flex-direction: row;
+        top: 120%;
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+    .slider .dot-btns {
+        margin: 0 15px;
+    }
+    .slider__subtitle {
+        font-size: 14px;
+    }
+    .slider__title {
+        font-size: 52px;
+    }
+    .section {
+        &__block {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__images {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .block {
+        &__group {
+            width: 60%;
+        }
+        &__scene-left,
+        &__scene-right {
+            margin-bottom: 40px;
+        }
+        &-reverse {
+            margin-bottom: 50px;
+        }
+    }
+    .images__big {
+        margin: 0;
+    }
+    .burger__btn {
+        display: block;
+    }
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        transition: all 0.3s;
+        background: rgb(44, 64, 88);
+        align-items: center;
+        padding: 30px 0;
+        &__item {
+            width: 80px;
+        }
+    }
+    .header {
+        & .social {
+            margin-top: auto;
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 668px) {
+    .slider__title {
+        font-size: 42px;
+    }
+    .slider__subtitle {
+        font-size: 12px;
+    }
+    .title-2 {
+        margin: 40px 0 30px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .slider-news {
+        & .dot-btns {
+        margin: 0 15px 80px 0;
+        }
+    }
+    .contacts {
+         transform: translate(0);
+         margin: 30px 0;
+        &__info {
+            margin-bottom: 30px;
+            & span {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+        }
+        &__block {
+            flex-direction: column;
+        }
+    }
+    .form__input {
+        font-size: 14px;
+        width: 100%;
+    }
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        & span {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        & .social {
+            width: 100%;
+        }
+    }
+    .section {
+        &__block {
+            margin-bottom: 80px;
+        }
+    }
+    .slider .dot-btns {
+        margin: 40px 10px 0;
+    }
+    .block {
+        &__group {
+            width: 80%;
+        }
+        &__scene-left,
+        &__scene-right {
+            margin: 0 0 40px;
+        }
+    }
+    .slider-news .slick-slide {
+    margin: 0 20px;
+    }
+    .images__big,
+    .images__group {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 530px) {
+    .slider__title {
+        font-size: 32px;
+        width: 90%;
+        text-align: center;
+    }
+    .slider__subtitle {
+        font-size: 12px;
+        width: 70%;
+        text-align: center;
+    }
+    .menu {
+        height: 100vh;
+    }
+}

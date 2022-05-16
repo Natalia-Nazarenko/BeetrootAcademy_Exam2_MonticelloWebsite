@@ -41,6 +41,8 @@ ul {
     width: 20%;
     & img {
       object-fit: contain;
+      width: 100%;
+      min-width: 135px;
     }
   }
   &__menu {
@@ -148,11 +150,24 @@ ul {
 .title-2 {
   @include title-2;
   margin-bottom: 20px;
+  position: relative;
+  &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: -20px;
+      left: 50%;
+      width: 35%;
+      height: 1px;
+      background: $font-color-blue;
+      transform: translate(-50%, 0);
+  }
 }
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   padding: 0 calc(50vw - 585px);
   &__block {
     display: flex;
@@ -162,18 +177,6 @@ ul {
   }
   &__title {
     margin: 100px 0;
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      top: -20px;
-      left: 0;
-      width: 100px;
-      height: 1px;
-      background: $font-color-blue;
-      transform: translate(100%);
-    }
   }
   &_news {
   background: linear-gradient(to right, rgba(126, 90, 255, 0.7), rgba(85, 183, 255, 0.7)), url('../img/backgr-news.jpg') no-repeat;
@@ -183,7 +186,9 @@ ul {
 }
 .block {
   &__scene-left {
+    width: 55%;
     & .parallax {
+      width: 100%;
     & img {
     object-fit: contain;
     width: 100%;
@@ -210,12 +215,19 @@ ul {
   &-reverse {
     flex-direction: row-reverse;
     & .block__scene-right {
-      position: relative;
-      z-index: 3;
-      &::after {
+      width: 55%;
+      & .parallax {
+        width: 100%;
+        & img {
+          z-index: 3;
+          object-fit: contain;
+          width: 100%;
+          height: auto;
+        }
+        &::after {
         content: '';
         position: absolute;
-        z-index: -3;
+        z-index: 0;
         display: inline-block;
         background: #7E5AFF;
         top: -10%;
@@ -224,9 +236,14 @@ ul {
         height: 100%;
       }
     }
+  }
 }
   &__subtitle {
   @include text($font-big, 18px, 1.3, 400, $font-color-blue);
+  }
+  &__title {
+    @include title-2;
+    margin-bottom: 15px;
   }
   &__text {
     @include text($font-small, 22px, 1.6, 400, $font-color-blue);
@@ -289,7 +306,8 @@ ul {
 .slider-news {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  max-width: 95%;
+  min-width: 310px;
   position: relative;
   &__block {
     cursor: pointer;
@@ -311,14 +329,12 @@ ul {
     @include text($font-big, 22px, 1.2, 700, $font-color-blue);
     margin-bottom: 15px;
     text-transform: uppercase;
-    width: 310px;
     padding: 0 20px;
     height: 80px;
   }
   &__text {
     @include text($font-small, 18px, 1.36, 400, $font-color-blue);
     margin-bottom: 40px;
-    width: 310px;
     padding: 0 20px;
     height: 50px;
   }
@@ -358,42 +374,42 @@ ul {
 }
 .section {
   &_gallery {
-  .title-2 {
-  &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      top: -20px;
-      left: -20%;
-      width: 100px;
-      height: 1px;
-      background: $font-color-blue;
-      transform: translate(100%);
-    }
-  }
   .btn {
     margin-bottom: 100px;
   }
 }
 &__images {
   display: flex;
-  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 50px;
 }
 }
 .images {
-  &__scene {
+  &__big {
     margin-right: 10px;
+    width: 50%;
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
   }
   &__group {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 500px;
+    width: 50%;
+    align-content: space-between;
+    justify-content: space-between;
   }
 }
 .group {
   &__item {
-    margin: 0 10px 10px 0;
+    width: 49%;
+    & img {
+      width: 100%;
+      object-fit: contain;
+      height: auto;
+    }
   }
 }
 .btn {
@@ -444,23 +460,11 @@ ul {
   flex-direction: column;
   align-items: center;
   &__title {
-    position: relative;
     margin-top: 20px;
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      top: -20px;
-      left: 50%;
-      width: 100px;
-      height: 1px;
-      background: $font-color-blue;
-      transform: translate(-50%, 0);
     }
-  }
-  &__block {
+    &__block {
   display: flex;
-  }
+    }
   &__info {
     display: flex;
     flex-direction: column;
@@ -506,9 +510,38 @@ ul {
     }
   }
 }
-// .parallax-background {
-//   position: absolute;
-//   background: url('../img/gal-big.jpg');
-// }
+.burger {
+  flex-direction: column;
+}
+.burger__btn {
+  position: fixed;
+  display: none;
+  border: none;
+  outline: none;
+  top: 7%;
+  left: 90%;
+  width: 30px;
+  height: 2px;
+  z-index: 15;
+  background: #fff;
+  cursor: pointer;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    top: 10px;
+    right: 0;
+    }
+    &::before {
+      top: -10px;
+    }
+}
+.toggle-burger {
+      top: 0;
+    }
 
 @import "media-queries";
